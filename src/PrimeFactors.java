@@ -4,15 +4,15 @@ import java.util.List;
 public class PrimeFactors {
     public List<Integer> resolve(int value){
         List<Integer> result = new ArrayList<Integer>();
-        if (value > 1){
-            while(value % 2 == 0){
-                result.add(2);
-                value /=2;
+            int candidate = 2;
+            while(value > 1){
+            while(value % candidate == 0){
+                result.add(candidate);
+                value /= candidate;
             }
-           if(value > 1){
-            result.add(value);
-           }
+            candidate++;
         }
-        return result;
+            return result;
+    
     }
 }
