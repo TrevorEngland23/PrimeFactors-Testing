@@ -7,20 +7,33 @@ import org.junit.Test;
  * PrimeFactorsTest
  */
 public class PrimeFactorsTest {
-    @Test
+
+    // @param values
+    // @return 
+
+  private static List<Integer> factorsOf(int value){
+    PrimeFactors primeFactors = new PrimeFactors();
+    return primeFactors.resolve(value);
+  }
+
+    public static List<Integer> listOf(int... values){
+        List<Integer> result = new ArrayList<Integer>();
+        for(int value : values){
+            result.add(value);
+        }
+        return result;
+    }
+      @Test
     public void testOne(){
-        PrimeFactors primeFactors = new PrimeFactors();
-        List<Integer> expected = new ArrayList<Integer>();
-        List<Integer> actual = primeFactors.resolve(1);
+        List<Integer> expected = listOf();
+        List<Integer> actual = factorsOf(1);
         assertEquals(expected, actual);
     }
 
     @Test
     public void testTwo(){
-        PrimeFactors primeFactors = new PrimeFactors();
-        List<Integer> expected = new ArrayList <Integer>();
-        expected.add(2);
-        List<Integer> actual = primeFactors.resolve(2);
+        List<Integer> expected = listOf(2);
+        List<Integer> actual = factorsOf(2);
         assertEquals(expected, actual);
     }
     
