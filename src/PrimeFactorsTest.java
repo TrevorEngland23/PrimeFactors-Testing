@@ -51,5 +51,10 @@ public class PrimeFactorsTest {
     public void testFive(){
         assertEquals(listOf(2,3), factorsOf(6));
     }
+
+    @Test
+    public void testSix(){
+        assertEquals(listOf(2, 2, 2), factorsOf(8));
+    }
     
 }
