@@ -36,5 +36,10 @@ public class PrimeFactorsTest {
         List<Integer> actual = factorsOf(2);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testThre() {
+        assertEquals(listOf(3), factorsOf(3));
+    }
     
 }
